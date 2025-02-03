@@ -32,7 +32,7 @@ public class ProjectEntity
 
     [Required]
     public int ServiceId { get; set; }
-    public EmployeeEntity Service { get; set; } = null!;
+    public ServiceEntity Service { get; set; } = null!;
 
     [Required]
     public int StatusId { get; set; }

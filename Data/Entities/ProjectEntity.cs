@@ -16,7 +16,7 @@ public class ProjectEntity
     public string? Description { get; set; }
 
     [Required]
-    [Column(TypeName = "date")]
+    [Column(TypeName = "date")] // YYYY-MM-DD HH:MM:SS
     public DateTime StartDate { get; set; }
 
     [Column(TypeName = "date")]

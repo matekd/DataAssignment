@@ -35,10 +35,7 @@ public class EmployeeService(IEmployeeRepository employeeRepository) : IEmployee
     {
         var entity = await _employeeRepository.GetAsync(x => x.Id == id);
 
-        if (entity == null)
-            return null;
-
-        return EmployeeFactory.Create(entity);
+        return entity != null ? EmployeeFactory.Create(entity) : null;
     }
 
     public async Task<IEnumerable<Employee>> GetEmployeesAsync()

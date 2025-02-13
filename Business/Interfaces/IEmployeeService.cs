@@ -1,13 +1,12 @@
 ﻿using Business.Models;
 
-namespace Business.Interfaces
+namespace Business.Interfaces;
+
+public interface IEmployeeService
 {
-    public interface IEmployeeService
-    {
-        Task<bool> CreateEmployeeAsync(EmployeeRegistrationForm form);
-        Task<IEnumerable<Employee>> GetEmployeesAsync();
-        Task<Employee?> GetEmployeeByIdAsync(int id);
-        Task<bool> UpdateEmployeeAsync(EmployeeUpdateForm form);
-        Task<bool> DeleteEmployeeAsync(int id);
-    }
+    public Task<bool> CreateEmployeeAsync(EmployeeRegistrationForm form);
+    public Task<IEnumerable<Employee>> GetEmployeesAsync();
+    public Task<Employee?> GetEmployeeByIdAsync(int id);
+    public Task<bool> UpdateEmployeeAsync(EmployeeUpdateForm form);
+    public Task<bool> DeleteEmployeeAsync(int id);
 }

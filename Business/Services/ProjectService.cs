@@ -8,7 +8,7 @@ namespace Business.Services;
 public class ProjectService(IProjectRepository projectRepository) : IProjectService
 {
     public readonly IProjectRepository _projectRepository = projectRepository;
-    // other services
+    // other services/repos
 
     public async Task<bool> CreateProjectAsync(ProjectRegistrationForm form)
     {
@@ -39,10 +39,7 @@ public class ProjectService(IProjectRepository projectRepository) : IProjectServ
     {
         var entity = await _projectRepository.GetAsync(x => x.Id == id);
 
-        if (entity == null)
-            return null;
-
-        return ProjectFactory.Create(entity);
+        return entity != null ? ProjectFactory.Create(entity) : null;
     }
 
     public async Task<IEnumerable<Project>> GetProjectsAsync()

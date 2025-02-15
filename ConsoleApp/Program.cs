@@ -22,6 +22,10 @@ serviceCollection.AddScoped<IServiceRepository, ServiceRepository>();
 serviceCollection.AddScoped<IStatusTypeRepository, StatusTypeRepository>();
 serviceCollection.AddScoped<IProjectRepository, ProjectRepository>();
 
+serviceCollection.AddScoped<ICustomerService, CustomerService>();
+serviceCollection.AddScoped<IEmployeeService, EmployeeService>();
+serviceCollection.AddScoped<IServiceService, ServiceService>();
+serviceCollection.AddScoped<IStatusTypeService, StatusTypeService>();
 serviceCollection.AddScoped<IProjectService, ProjectService>();
 
 var serviceProvider = serviceCollection.BuildServiceProvider();

@@ -96,4 +96,17 @@ public class ProjectService(IProjectRepository projectRepository) : IProjectServ
             return false;
         }
     }
+
+    public async Task<bool> Exists(int id)
+    {
+        try
+        {
+            var result = await _projectRepository.AlreadyExists(x => x.Id == id);
+            return result;
+        }
+        catch
+        {
+            return false;
+        }
+    }
 }

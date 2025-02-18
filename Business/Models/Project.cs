@@ -11,9 +11,9 @@ public class Project
 
     public string? Description { get; set; }
 
-    public DateTime StartDate { get; set; }
+    public DateOnly StartDate { get; set; }
 
-    public DateTime? EndDate { get; set; }
+    public DateOnly? EndDate { get; set; }
 
     public int CustomerId { get; set; }
     public string CustomerName { get; set; } = null!;
@@ -39,10 +39,10 @@ public class ProjectRegistrationForm
 
     [Required]
     [Column(TypeName = "date")]
-    public DateTime StartDate { get; set; }
+    public DateOnly StartDate { get; set; }
 
     [Column(TypeName = "date")]
-    public DateTime? EndDate { get; set; }
+    public DateOnly? EndDate { get; set; }
 
     [Required]
     public int CustomerId { get; set; }
@@ -65,9 +65,9 @@ public class ProjectUpdateForm
 
     public string? Description { get; set; }
 
-    public DateTime StartDate { get; set; }
+    public DateOnly StartDate { get; set; }
 
-    public DateTime? EndDate { get; set; }
+    public DateOnly? EndDate { get; set; }
 
     public int CustomerId { get; set; }
 

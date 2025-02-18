@@ -16,11 +16,11 @@ public class ProjectEntity
     public string? Description { get; set; }
 
     [Required]
-    [Column(TypeName = "date")] // YYYY-MM-DD HH:MM:SS
-    public DateTime StartDate { get; set; }
+    [Column(TypeName = "date")] // YYYY-MM-DD
+    public DateOnly StartDate { get; set; }
 
     [Column(TypeName = "date")]
-    public DateTime? EndDate { get; set; }
+    public DateOnly? EndDate { get; set; }
 
     [Required]
     public int CustomerId { get; set; }

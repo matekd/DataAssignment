@@ -19,3 +19,6 @@ body {
 html {
   scroll-behavior: smooth;
 }
+label {
+  display: block;
+}

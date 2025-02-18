@@ -17,35 +17,42 @@ const ProjectRegistrationForm = () => {
   const [status, setStatus] = useState([])
 
   const fetchData = async (apiUrl, setter) => {
-   const res = await fetch(apiUrl)
-   const data = await res.json()
-   setter(data)
-   }
+    const res = await fetch(apiUrl)
+    const data = await res.json()
+    setter(data)
+  }
 
   useEffect(() => {
-   fetchData("https://localhost:7123/api/customer", setCustomers)
+    fetchData("https://localhost:7123/api/customer", setCustomers)
   }, [])
   useEffect(() => {
-   fetchData("https://localhost:7123/api/employee", setEmployees)
+    fetchData("https://localhost:7123/api/employee", setEmployees)
   }, [])
   useEffect(() => {
-   fetchData("https://localhost:7123/api/service", setServices)
+    fetchData("https://localhost:7123/api/service", setServices)
   }, [])
   useEffect(() => {
-   fetchData("https://localhost:7123/api/statusType", setStatus)
+    fetchData("https://localhost:7123/api/statusType", setStatus)
   }, [])
 
   const handleChange = (e) => {
     const { name, value } = e.target
-
-    setFormData({...formData, [name]: value})
+    if(name === "CustomerId" || name === "EmployeeId" || name === "ServiceId" || name === "StatusId")
+      setFormData({...formData, [name]: Number(value)})
+    else
+      setFormData({...formData, [name]: value})
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     
     // validate form here
-    if (formData.EndDate == "") formData.EndDate = null
+    if (formData.EndDate === "") {
+      setFormData({
+        ...formData,
+        EndDate: null
+      })
+    }
 
     const res = await fetch('https://localhost:7123/api/project', {
       method: 'POST',
@@ -57,9 +64,12 @@ const ProjectRegistrationForm = () => {
 
     if (res.ok) {
       // return to home page?
+      console.log("success")
     } else {
+      console.log("fail")
       // alert error in some way
     }
+    alert("!")
   }
 
   return (
@@ -78,7 +88,7 @@ const ProjectRegistrationForm = () => {
         </label>
 
         <label className="form-label">End date <br />
-          <input type="date" name="EndDate" value={formData.EndDate} onChange={handleChange} />
+          <input type="date" name="EndDate" value={`${formData.EndDate !== null ? formData.EndDate : ''}`} onChange={handleChange} />
         </label>
 
         <label className="form-label">Customer <br />

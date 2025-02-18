@@ -4,6 +4,7 @@ import ProjectUpdateForm from "../Components/ProjectUpdateForm"
 
 const ProjectEdit = () => {
   const { projectId } = useParams()
+
   return (
     <>
       <ProjectUpdateForm id={projectId}/>

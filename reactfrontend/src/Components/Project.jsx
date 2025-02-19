@@ -1,10 +1,22 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
 
-const Project = ({p}) => {
+// project p, removeProject rp (from parent state list)
+const Project = ({p, rp}) => {
   
-  const RemoveProject = () => {
-    alert("!")
+  const RemoveProject = async () => {
+    const res = await fetch(`https://localhost:7123/api/project?id=${p.id}`, {
+      method: 'DELETE'
+    })
+
+    if (res.ok) {
+      // return to home page?
+      console.log("success")
+      rp(p.id)
+    } else {
+      console.log("fail")
+      // alert error in some way
+    }
   }
 
   return (

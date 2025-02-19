@@ -15,6 +15,10 @@ const Projects = () => {
   useEffect(() => {
     fetchData()
   }, [])
+
+  const removeProject = (id) => {
+    setProject(projects.filter(p => p.id !== id))
+  }
   
   return (
     <>
@@ -30,7 +34,7 @@ const Projects = () => {
           </div>
           
           {projects.length > 0 && projects.map((project) => (
-            <Project key={project.id} p={project} />
+            <Project key={project.id} p={project} rp={removeProject} />
           ))}
         </div>
       </main>

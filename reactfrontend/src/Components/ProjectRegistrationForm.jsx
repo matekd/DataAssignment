@@ -69,7 +69,6 @@ const ProjectRegistrationForm = () => {
       console.log("fail")
       // alert error in some way
     }
-    alert("!")
   }
 
   return (

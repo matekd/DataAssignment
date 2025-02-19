@@ -1,13 +1,17 @@
 import React from "react"
 import { useParams } from 'react-router-dom'
 import ProjectUpdateForm from "../Components/ProjectUpdateForm"
+import Nav from "../Components/Nav"
 
 const ProjectEdit = () => {
   const { projectId } = useParams()
 
   return (
     <>
-      <ProjectUpdateForm id={projectId}/>
+      <Nav />
+      <main>
+        <ProjectUpdateForm id={projectId}/>
+      </main>
     </>
   )
 }

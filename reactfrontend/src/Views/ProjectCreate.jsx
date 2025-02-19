@@ -1,10 +1,14 @@
 import React from "react"
 import ProjectRegistrationForm from "../Components/ProjectRegistrationForm"
+import Nav from "../Components/Nav"
 
 const ProjectCreate = () => {
   return (
     <>
-      <ProjectRegistrationForm />
+      <Nav />
+      <main>
+        <ProjectRegistrationForm />
+      </main>
     </>
   )
 }

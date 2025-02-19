@@ -30,10 +30,16 @@ public static class ProjectFactory
 
         CustomerId = entity.CustomerId,
         CustomerName = entity.Customer.Name,
+        ContactPerson = entity.Customer.ContactPerson,
+
         EmployeeId = entity.EmployeeId,
         EmployeeName = entity.Employee.Name,
+        EmployeeRole = entity.Employee.Role,
+
         ServiceId = entity.ServiceId,
         ServiceName = entity.Service.Name,
+        ServicePrice = entity.Service.Price,
+
         StatusId = entity.StatusId,
         Status = entity.Status.Status,
     };

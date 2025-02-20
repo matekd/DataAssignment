@@ -25,12 +25,17 @@ const Projects = () => {
       <Nav />
       <main>
         <div className="projects">
-          <p>Project Name</p>
-          <p>Customer Name</p>
-          <p>Employee Name</p>
-          <p>Service Title</p>
+          <p className="top">Name</p>
+          <p className="top">Status</p>
+          <p className="top">Start date</p>
+          <p className="top">End date</p>
+          <p className="top">Description</p>
+          <p className="top">Customer</p>
+          <p className="top">Employee</p>
+          <p className="top">Service</p>
+          <p className="top">Price</p>
           <div className="buttons">
-            <p>Actions</p>
+            <p className="top">Actions</p>
           </div>
           
           {projects.length > 0 && projects.map((project) => (

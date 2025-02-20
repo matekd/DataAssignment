@@ -22,10 +22,15 @@ const Project = ({p, rp}) => {
   return (
     <>
       <p>{p.name}</p>
+      <p>{p.status}</p>
+      <p>{p.startDate}</p>
+      <p>{p.endDate}</p>
+      <p>{p.description}</p>
       <p>{p.customerName}</p>
       <p>{p.employeeName}</p>
       <p>{p.serviceName}</p>
-      
+      <p>{p.servicePrice}</p>
+
       <div className="buttons">
         <NavLink className="edit" to={`/project/${p.id}`}>Edit</NavLink>
         <button className="remove" onClick={RemoveProject}>Remove</button>

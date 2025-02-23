@@ -8,15 +8,11 @@ namespace Business.Services;
 public class ProjectService(IProjectRepository projectRepository) : IProjectService
 {
     public readonly IProjectRepository _projectRepository = projectRepository;
-    // other services/repos
 
     public async Task<bool> CreateProjectAsync(ProjectRegistrationForm form)
     {
         if (form == null)
             return false;
-
-        // Check if foreign keys exist, using services, or repos for .exists?
-        // return false if any fails
 
         try
         {
@@ -93,19 +89,6 @@ public class ProjectService(IProjectRepository projectRepository) : IProjectServ
         catch
         {
             await _projectRepository.RollbackTransactionAsync();
-            return false;
-        }
-    }
-
-    public async Task<bool> Exists(int id)
-    {
-        try
-        {
-            var result = await _projectRepository.AlreadyExists(x => x.Id == id);
-            return result;
-        }
-        catch
-        {
             return false;
         }
     }

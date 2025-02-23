@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{2E6E9220-FD01-427E-8754-0AEA3593248D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{38BF19FF-BB26-4BAF-98CE-C73C6C501FDE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{916090BE-7061-4FC7-BE33-DF1DF2C28DE5}"
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "reactfrontend", "ReactFrontend\reactfrontend.esproj", "{EE74358E-E669-4A70-A238-C19B2F96DAF5}"
@@ -27,10 +25,6 @@ Global
 		{2E6E9220-FD01-427E-8754-0AEA3593248D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E6E9220-FD01-427E-8754-0AEA3593248D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E6E9220-FD01-427E-8754-0AEA3593248D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{38BF19FF-BB26-4BAF-98CE-C73C6C501FDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38BF19FF-BB26-4BAF-98CE-C73C6C501FDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38BF19FF-BB26-4BAF-98CE-C73C6C501FDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{38BF19FF-BB26-4BAF-98CE-C73C6C501FDE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{916090BE-7061-4FC7-BE33-DF1DF2C28DE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{916090BE-7061-4FC7-BE33-DF1DF2C28DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{916090BE-7061-4FC7-BE33-DF1DF2C28DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU

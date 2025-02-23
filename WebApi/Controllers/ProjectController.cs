@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers;
 
+// api/project
 [Route("api/[controller]")]
 [ApiController]
 public class ProjectController(IProjectService projectService) : ControllerBase
@@ -30,6 +31,7 @@ public class ProjectController(IProjectService projectService) : ControllerBase
         return Ok(result);
     }
 
+    // api/project/:id
     [HttpGet("{id}")]
     public async Task<IActionResult> Get(int id)
     {
@@ -48,6 +50,7 @@ public class ProjectController(IProjectService projectService) : ControllerBase
         return result ? Ok(result) : BadRequest("Project was not updated");
     }
 
+    // api/project?id=<int>
     [HttpDelete]
     public async Task<IActionResult> Delete(int id)
     {
